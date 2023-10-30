@@ -1,0 +1,114 @@
+	<%= link_to "Repeat input", :seq_input %>
+
+ставим селениум иде на хром
+который имитирует действия пользователя (не видеозапись)
+
+юнит-тестирование - наше тестирование из 5-7 лабы
+функциональное тестирование - ответ страниц
+интеграционное - взаимосвязь контроллера с другими частями система
+системное тестирование - высокоуровневое, проходит по вашей разработке и бизнес-процессам
+
+rspec requests/ - обядиняет функ и интегр тестировании
+
+rails routes
+rails routes -c CONTROLLER_NAME (-expended в виде таблицы)
+
+то же самое с помощью кода:
+
+~ rails g RSpec install
+
+CONTROLLER_NAME_spec.rb
+
+let 
+
+let(:query_params){
+	{
+	name:Faker::Name.name,
+	...
+	}
+}
+
+describe(:query_params){
+	{
+	name:Faker::Name.name,
+	...
+	}
+}
+
+describe "POST / Result"
+	context "when params are not present"
+		it "return status code 302" do
+			post result_path
+			except(response.code).to eq '302'
+		end
+	end
+	context "when params are present"
+		it "return status code 200" do
+			post result_path? params: {name ..., date ...}, xhr: true # для работы аякс
+			except(response.code).to eq '200'
+		end
+	end	
+	it "create correct message"
+			post result_path? params: query_params, xhr: true # для работы аякс
+			except(assigns(:welcome_msg)).to eq 'Welcome Dmitriy'
+		end
+end	
+
+
+после добавления гема (напрмер для добавления assigns) нужно install bundle
+
+
+12334556
+
+gem capybara (использует селениум под капотом)
+
+создаем папку system/CONTROLLER_NAME_spec.rb в ней
+
+RSpec.describe 'Controoler_name ', type: :system dp
+	describe 'fill form process' do
+		context '' do
+			it "should display message" do
+				visit root_path
+				fill_in :email, with: Faker::Internet.email
+				fill_in :name, with: Faker::Name.first_name
+				
+				fill_in :email, with: Date.today
+				except(page).to have_text('Happy birthday!')   # mb have_html
+				
+				fill_in :email, with: Date.today.prev_day
+				except(page).not_to have_text('Happy birthday!')   # mb have_html
+				
+				find('#btn-submit').click
+				
+			end
+		end
+	end
+end
+
+capybara github can help yuou ;-)
+
+
+
+
+
+
+
+
+
+
+
+
+
+~ rails g model User name:string email:string bort-date:date age:int
+# if you want to delete ~ rails d model User
+
+~ rails db:migrate
+~ rails db:rollback STEP=1 # откат транзакции (одной)
+
+внутри ..._create_users.rb
+null:false, default
+
+~ rails g migration AddRoleToUsers role:integer # добавление колонки роль
+~ rails db:migrate # для синхронизации
+
+внутри irb (rails c) можно reload! после обновления файлов приложения

@@ -1,0 +1,204 @@
+{
+  "id": "e0771b85-9d6c-4bf9-bd82-fc165b01a455",
+  "version": "2.0",
+  "name": "lb9",
+  "url": "http://localhost:3000",
+  "tests": [{
+    "id": "0b287305-5115-464a-9257-bbbe16f533ff",
+    "name": "Untitled",
+    "commands": []
+  }, {
+    "id": "1a4c4969-e453-4d6f-bfc7-cb12ba4044f0",
+    "name": "test_1",
+    "commands": [{
+      "id": "cd3a9087-9946-4399-b2f8-89e3552c942c",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "470a5c65-e1b4-4d79-853d-96d7e71d2b4a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "908x1033",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2e05e788-f046-47a1-b2f3-fbb6f05d9cea",
+      "comment": "",
+      "command": "click",
+      "target": "name=commit",
+      "targets": [
+        ["name=commit", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='commit']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "102796f8-58ad-4e34-bfdb-bbcbdc84548f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=th",
+      "targets": [
+        ["css=th", "css:finder"],
+        ["xpath=//table[@id='result']/tbody/tr/th", "xpath:idRelative"],
+        ["xpath=//th", "xpath:position"],
+        ["xpath=//th[contains(.,'Найдены дружественные числа:')]", "xpath:innerText"]
+      ],
+      "value": "Найдены дружественные числа:"
+    }, {
+      "id": "7d92ca47-6907-4752-babc-55b71361a46b",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(2) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(1)", "css:finder"],
+        ["xpath=//table[@id='result']/tbody/tr[2]/td", "xpath:idRelative"],
+        ["xpath=//td", "xpath:position"],
+        ["xpath=//td[contains(.,'220')]", "xpath:innerText"]
+      ],
+      "value": "220"
+    }, {
+      "id": "92cefd8e-7fb8-4ad7-9b5e-e4c219f6e728",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(2) > td:nth-child(2)",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(2)", "css:finder"],
+        ["xpath=//table[@id='result']/tbody/tr[2]/td[2]", "xpath:idRelative"],
+        ["xpath=//td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'284')]", "xpath:innerText"]
+      ],
+      "value": "284"
+    }, {
+      "id": "023a7cb0-ef74-4a0e-8784-6861c83041f3",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(3) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(3) > td:nth-child(1)", "css:finder"],
+        ["xpath=//table[@id='result']/tbody/tr[3]/td", "xpath:idRelative"],
+        ["xpath=//tr[3]/td", "xpath:position"],
+        ["xpath=//td[contains(.,'1184')]", "xpath:innerText"]
+      ],
+      "value": "1184"
+    }, {
+      "id": "ce1ceda9-6222-4e6a-93f3-09a219724372",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(3) > td:nth-child(2)",
+      "targets": [
+        ["css=tr:nth-child(3) > td:nth-child(2)", "css:finder"],
+        ["xpath=//table[@id='result']/tbody/tr[3]/td[2]", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'1210')]", "xpath:innerText"]
+      ],
+      "value": "1210"
+    }, {
+      "id": "bda8aaa9-9dec-4e68-a043-b755f2d69dd3",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(4) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(4) > td:nth-child(1)", "css:finder"],
+        ["xpath=//table[@id='result']/tbody/tr[4]/td", "xpath:idRelative"],
+        ["xpath=//tr[4]/td", "xpath:position"],
+        ["xpath=//td[contains(.,'2620')]", "xpath:innerText"]
+      ],
+      "value": "2620"
+    }, {
+      "id": "ae91af2e-6f75-481d-87ad-364b17497a36",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(4) > td:nth-child(2)",
+      "targets": [
+        ["css=tr:nth-child(4) > td:nth-child(2)", "css:finder"],
+        ["xpath=//table[@id='result']/tbody/tr[4]/td[2]", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'2924')]", "xpath:innerText"]
+      ],
+      "value": "2924"
+    }]
+  }, {
+    "id": "76c602ee-8c81-42c4-ab30-dcf09426be16",
+    "name": "test_2",
+    "commands": [{
+      "id": "d4a3cccd-a216-4b61-adf8-a2dadfd315a0",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e9bfa12f-0652-4a15-af8c-4a22be4af6a8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "908x1033",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "95fe6486-9d59-4b81-af24-d1fb7f5cb7e6",
+      "comment": "",
+      "command": "click",
+      "target": "id=num",
+      "targets": [
+        ["id=num", "id"],
+        ["name=num", "name"],
+        ["css=#num", "css:finder"],
+        ["xpath=//input[@id='num']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9966a30e-328b-4f20-92b0-1b41a043a682",
+      "comment": "",
+      "command": "type",
+      "target": "id=num",
+      "targets": [
+        ["id=num", "id"],
+        ["name=num", "name"],
+        ["css=#num", "css:finder"],
+        ["xpath=//input[@id='num']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4c691ca0-8052-4893-898a-735822840274",
+      "comment": "",
+      "command": "click",
+      "target": "name=commit",
+      "targets": [
+        ["name=commit", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='commit']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "09641064-79b9-4b69-a0ac-039ad5ae420a",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=result",
+      "targets": [
+        ["id=result", "id"],
+        ["css=#result", "css:finder"],
+        ["xpath=//table[@id='result']", "xpath:attributes"],
+        ["xpath=//table", "xpath:position"],
+        ["xpath=//table[contains(.,'Дружественные числа не найдены')]", "xpath:innerText"]
+      ],
+      "value": "Дружественные числа не найдены"
+    }]
+  }],
+  "suites": [{
+    "id": "ea4e56a8-5a69-4376-8186-9b604c20e120",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["0b287305-5115-464a-9257-bbbe16f533ff"]
+  }],
+  "urls": ["http://localhost:3000/"],
+  "plugins": []
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Расписание
+    </title>
+    <style>
+        .table {
+            display: table;
+        }
+
+        .row {
+            display: table-row; 
+        }
+
+        .row * {
+            display: table-cell;
+            padding: 3px;
+            border-collapse: collapse;
+            border-width: 1px;
+            border-style: double;
+        }
+        .left_border{
+            border-right-style:hidden
+        }
+        .right_border{
+            border-left-style:hidden
+        }
+    </style>
+</head>
+
+<body>
+    <div class="table">
+        <div style="/*font-size: 30px; */ display: table-caption; padding: 10px; text-align: center;">Расписание</div>
+        <div class="row">
+            <div></div>
+            <div>Числитель</div>
+            <div>Знаменатель</div>
+            <div></div>
+        </div>
+        <div class="row">
+            <div>Время пары</div>
+            <div class="left_border">Название предмета</div>
+            <div class="right_border"></div>
+            <div>Кабинет</div>
+        </div>
+        <div class="row">
+            <div>8:30-10:05</div>
+            <div>Физика</div>
+            <div></div>
+            <div>Каф физики</div>
+        </div>
+        <div class="row">
+            <div>10:15-11:50</div>
+            <div>Физика</div>
+            <div>Программирование</div>
+            <div>Каф физики</div>
+        </div>
+        <div class="row">
+            <div>12:00-13:35</div>
+            <div class="left_border">Правоведение</div>
+            <div class="right_border"></div>
+            <div>744л</div>
+        </div>
+        <div class="row">
+            <div>13:50-15:25</div>
+            <div class="left_border">Электротехника</div>
+            <div class="right_border"></div>
+            <div>304</div>
+        </div>
+    </div>
+</body>
+</html>

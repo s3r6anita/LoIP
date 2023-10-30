@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Рубежный контроль 1</title>
+    <script type="text/javascript" src="script.js"></script>
+    <script>
+      const reArray = /^(?:(-?\d*)\s?)+$/
+      const reK = /^(\d+)$/
+
+      function print_entry(x) {
+        let outputel = document.getElementById("output")
+        let tmp = new String("<tr><td>" + "1</td></tr>")
+        let row = document.createElement('tr')
+        outputel.appendChild(row)
+        let cell = document.createElement('td')
+        row.appendChild(cell)
+        cell.innerHTML = x
+      }
+
+      function print_table(max, array, k) {
+        document.getElementById("output").innerHTML = ""
+        array.map( function(num) {
+          if (max - num < k) {
+            print_entry(num)
+          }
+        })
+      }
+
+      function find_max(array) {
+        var max = array[0];
+
+        array.map(function(number) {
+          num = new Number(array[number])
+          if (max < num) {
+            max = num
+          }
+        })
+
+        document.getElementById("max").innerHTML = "<b>" + max + "</b>"
+
+        return max
+      }
+
+      function check_form() {
+        arrayel = document.getElementById("array");
+        kel = document.getElementById("k");
+
+        let res = true;
+
+        if ((!reArray.test(arrayel["value"])) || (arrayel["value"].slice(-1) == ' ')) {
+          alert("В поле ввода последовательностей ошибка! (буквы, лишние пробелы, нет чисел)")
+          res = false;
+        }
+        if (!reK.test(kel["value"])) {
+          alert("В поле ввода числа k ошибка! (есть что-то кроме цифр или нет ничего)")
+          res = false
+        }
+        return res
+      }
+
+      function make_array() {
+        let arr = arrayel["value"].split(" ");
+        return arr
+      }
+
+      function main() {
+        arrayel = document.getElementById("array");
+        kel = document.getElementById("k");
+        let ok = check_form()
+        if (ok) {
+          let array = make_array()
+          let k = new Number(kel["value"])
+        
+          let max = find_max(array)
+          print_table(max, array, k)
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Рубежный контроль №1</h1>
+    <h2>Билет №46</h2>
+    <h2>Широкий М. А. | ИУ6-35Б | 4 октября 2022</h2>
+    
+    <h2>Текст задачи:</h2>
+    <p>
+      С клавиатуры вводится последовательность чисел через пробел и число k.
+      Необходимо найти все элементы массива, которые отличаются от максимального не
+      более, чем на k.
+    </p>
+
+    <h2>Реализация</h2>
+    <div>
+      <a>Введите последовательность чисел и k.</a>
+      <p>
+        <a>Последовательность:</a>
+        <input id="array" type="text" value="1 2 3" required />
+      </p>
+      <p>
+        <a>Число k:</a>
+        <input id="k" type="text" value="5" required />
+      </p>
+      <p>
+      <button id="proceed" onclick="main()">Обработка!</button>
+      </p>
+      
+      <p>
+        <a>Результат:</a>
+        <a id="max"></a>
+        <table>
+          <tbody id="output">
+          </tbody>
+        </table>
+      </p>
+    </div>
+
+  </body>
+</html>
+

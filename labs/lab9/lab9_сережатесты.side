@@ -1,0 +1,239 @@
+{
+  "id": "783e212c-2a86-437e-b060-c51e15a7f98f",
+  "version": "2.0",
+  "name": "lab9",
+  "url": "http://localhost:3000",
+  "tests": [{
+    "id": "30a97913-aca1-4271-a046-b48b5a2f1688",
+    "name": "test_1",
+    "commands": [{
+      "id": "27d322b3-4d42-424b-a49d-f8ce8da36133",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "830e50c9-a717-4a27-97e8-88746234dc06",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "908x1033",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "91b26988-fc6c-4116-814b-409ba6c2a2fe",
+      "comment": "",
+      "command": "click",
+      "target": "name=commit",
+      "targets": [
+        ["name=commit", "name"],
+        ["css=input:nth-child(6)", "css:finder"],
+        ["xpath=//input[@name='commit']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f8a480a-30b0-49e1-b7d2-7ea140b1d7ca",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h3",
+      "targets": [
+        ["css=h3", "css:finder"],
+        ["xpath=//div[@id='result']/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Результаты:')]", "xpath:innerText"]
+      ],
+      "value": "Результаты:"
+    }, {
+      "id": "79fec96d-1ed3-4586-879b-ce47ec271baf",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#result > #str",
+      "targets": [
+        ["css=#result > #str", "css:finder"],
+        ["xpath=//p[@id='str']", "xpath:attributes"],
+        ["xpath=//div[@id='result']/p", "xpath:idRelative"],
+        ["xpath=//div[4]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'str: 0 1 5 5 5 10 20 25 -5 1 5 25 125 625')]", "xpath:innerText"]
+      ],
+      "value": "str: 0 1 5 5 5 10 20 25 -5 1 5 25 125 625"
+    }, {
+      "id": "262fdfdf-5da6-4b42-947e-12428364ec5d",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=max found",
+      "targets": [
+        ["id=max found", "id"],
+        ["css=#max\\ found", "css:finder"],
+        ["xpath=//p[@id='max found']", "xpath:attributes"],
+        ["xpath=//div[@id='result']/p[2]", "xpath:idRelative"],
+        ["xpath=//p[2]", "xpath:position"],
+        ["xpath=//p[contains(.,'max found: -5 1 5 25 125 625')]", "xpath:innerText"]
+      ],
+      "value": "max found: -5 1 5 25 125 625"
+    }, {
+      "id": "b7bc0804-69a7-41d2-8206-2d0311fff465",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=found",
+      "targets": [
+        ["id=found", "id"],
+        ["css=#found", "css:finder"],
+        ["xpath=//p[@id='found']", "xpath:attributes"],
+        ["xpath=//div[@id='result']/p[3]", "xpath:idRelative"],
+        ["xpath=//p[3]", "xpath:position"],
+        ["xpath=//p[contains(.,'found: 0 1 5 | 5 | 5 10 20 25 | -5 1 5 25 125 625')]", "xpath:innerText"]
+      ],
+      "value": "found: 0 1 5 | 5 | 5 10 20 25 | -5 1 5 25 125 625"
+    }]
+  }, {
+    "id": "5e1289c2-b1dc-45ed-ad04-338adef2aa2c",
+    "name": "test_2",
+    "commands": [{
+      "id": "d3dcf31e-a795-4e3b-aadf-4cc14fc9d5f6",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f727c664-1c5f-45ea-8acc-694d0dc207e2",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "908x1033",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5b139e2b-4be3-4ebf-b318-95eec0959d72",
+      "comment": "",
+      "command": "click",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f79c3f08-f447-4a62-90b6-497b7f7fb335",
+      "comment": "",
+      "command": "click",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "55396f42-8039-4fc8-808a-7fd9e5eb615b",
+      "comment": "",
+      "command": "type",
+      "target": "id=str",
+      "targets": [
+        ["id=str", "id"],
+        ["name=str", "name"],
+        ["css=#str", "css:finder"],
+        ["xpath=//input[@id='str']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f182b973-56e1-43fc-bbc4-46034c9bb5bc",
+      "comment": "",
+      "command": "click",
+      "target": "name=commit",
+      "targets": [
+        ["name=commit", "name"],
+        ["css=input:nth-child(6)", "css:finder"],
+        ["xpath=//input[@name='commit']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9a2beb3b-5640-4210-83e3-260e7d5958fd",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "name=commit",
+      "targets": [
+        ["name=commit", "name"],
+        ["css=input:nth-child(6)", "css:finder"],
+        ["xpath=//input[@name='commit']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "204229b7-95c9-4b03-bda8-f52667f5c8eb",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "name=commit",
+      "targets": [
+        ["name=commit", "name"],
+        ["css=input:nth-child(6)", "css:finder"],
+        ["xpath=//input[@name='commit']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b753adb8-035a-4d36-9b22-c05c4ff09130",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h3",
+      "targets": [
+        ["css=h3", "css:finder"],
+        ["xpath=//div[@id='result']/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Результаты:')]", "xpath:innerText"]
+      ],
+      "value": "Результаты:"
+    }, {
+      "id": "edcf2e09-90c9-45de-bfc1-529184d54f5b",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#result > #str",
+      "targets": [
+        ["css=#result > #str", "css:finder"],
+        ["xpath=//p[@id='str']", "xpath:attributes"],
+        ["xpath=//div[@id='result']/p", "xpath:idRelative"],
+        ["xpath=//div[4]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'str: Error')]", "xpath:innerText"]
+      ],
+      "value": "str: Error"
+    }, {
+      "id": "9a4ba600-cdb9-44ac-b4d3-a51407816804",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=max found",
+      "targets": [
+        ["id=max found", "id"],
+        ["css=#max\\ found", "css:finder"],
+        ["xpath=//p[@id='max found']", "xpath:attributes"],
+        ["xpath=//div[@id='result']/p[2]", "xpath:idRelative"],
+        ["xpath=//p[2]", "xpath:position"],
+        ["xpath=//p[contains(.,'max found: 0')]", "xpath:innerText"]
+      ],
+      "value": "max found: 0"
+    }, {
+      "id": "b4fe12ea-1c43-4c6c-aceb-93a7b084cfc2",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=found",
+      "targets": [
+        ["id=found", "id"],
+        ["css=#found", "css:finder"],
+        ["xpath=//p[@id='found']", "xpath:attributes"],
+        ["xpath=//div[@id='result']/p[3]", "xpath:idRelative"],
+        ["xpath=//p[3]", "xpath:position"]
+      ],
+      "value": "found: 0"
+    }]
+  }],
+  "suites": [{
+    "id": "2cca65b1-1fd7-4513-ae7c-e7f08bd94a82",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://localhost:3000/"],
+  "plugins": []
+}

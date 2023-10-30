@@ -1,0 +1,50 @@
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------
+NumberControllerTest: test_should_return_empty_result
+-----------------------------------------------------
+Started GET "/number/view?a=1+1+2+2+3&n=0" for 127.0.0.1 at 2022-11-25 20:12:09 +0300
+Processing by NumberController#view as HTML
+  Parameters: {"a"=>"1 1 2 2 3", "n"=>"0"}
+  Rendering layout layouts/application.html.erb
+  Rendering number/view.html.erb within layouts/application
+  Rendered number/view.html.erb within layouts/application (Duration: 23.5ms | Allocations: 710)
+  Rendered layout layouts/application.html.erb (Duration: 406.7ms | Allocations: 174583)
+Completed 200 OK in 471ms (Views: 426.3ms | ActiveRecord: 0.0ms | Allocations: 180037)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+NumberControllerTest: test_should_get_view
+------------------------------------------
+Started GET "/number/view" for 127.0.0.1 at 2022-11-25 20:12:10 +0300
+Processing by NumberController#view as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering number/view.html.erb within layouts/application
+  Rendered number/view.html.erb within layouts/application (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 4327)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 4670)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+NumberControllerTest: test_should_reqturn_correct_data
+------------------------------------------------------
+Started GET "/number/view?a=1+1+2+2+3&n=5" for 127.0.0.1 at 2022-11-25 20:12:10 +0300
+Processing by NumberController#view as HTML
+  Parameters: {"a"=>"1 1 2 2 3", "n"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering number/view.html.erb within layouts/application
+  Rendered number/view.html.erb within layouts/application (Duration: 0.1ms | Allocations: 63)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 4340)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 4716)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+NumberControllerTest: test_should_get_input
+-------------------------------------------
+Started GET "/number/input" for 127.0.0.1 at 2022-11-25 20:12:10 +0300
+Processing by NumberController#input as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering number/input.html.erb within layouts/application
+  Rendered number/input.html.erb within layouts/application (Duration: 24.9ms | Allocations: 948)
+  Rendered layout layouts/application.html.erb (Duration: 26.1ms | Allocations: 5233)
+Completed 200 OK in 27ms (Views: 26.4ms | ActiveRecord: 0.0ms | Allocations: 5566)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m

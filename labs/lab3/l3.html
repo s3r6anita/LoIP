@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lab work 3</title>
+	<script>
+		function setTree(element) {
+		    let list0 = document.getElementById("list0");
+		    let ul = document.createElement('ul');
+		    let myChild = element.firstElementChild;
+	    
+	    	while (myChild) {
+		        let li = document.createElement('li');
+		        let list = setTree(myChild);
+
+		        li.innerHTML = myChild.tagName;
+		        console.log(myChild.tagName);
+
+		        li.appendChild(list);
+		        ul.appendChild(li);
+
+		        myChild = myChild.nextElementSibling;
+	    	}
+		    // element.appendChild(ul);
+		    list0.appendChild(ul);
+		    return ul;	
+		}
+	</script>
+</head>
+<body>
+	<p>Hello!</p>
+    <div id="1">
+        <div id="2">
+            <div id="3"></div>
+        </div>
+    </div>
+    <button onclick="setTree(body)">Start</button>
+    <div id="list0"></div> 
+</body>
+</html>

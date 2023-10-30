@@ -1,0 +1,14 @@
+<div class="wrapper-block">
+    <%= form_with url: '/number/view.js', method: :get, local: false do |form| %>
+        <div class="mb-2">
+            <div class="mb-2">Число значений:</div>
+            <%= form.text_field :n, value: "14", class: 'form-control' %>
+        </div>
+        <div class="mb-4">
+            <div class="mb-2">Значения:</div>
+            <%= form.text_area :a, value: "0 1 5 5 5 10 20 25 -5 1 5 25 125 625", class: 'form-control' %>
+        </div>
+        <%= form.submit "Найти последовательности!", class: "btn btn-dark" %>
+    <% end %>
+    <div id="result"></div>  
+</div>

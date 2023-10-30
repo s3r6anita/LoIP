@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab work 4.2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="script4.2.js"></script>
+    <style>
+        .price {
+            position: fixed;
+            bottom: 1rem;
+            left: 50%;
+            /*transform: translate(-50%, 0);*/
+        }
+
+        .main {
+            margin-bottom: 100px;
+        }
+        .input-block {
+            display: inline-block;
+        }
+
+        #calc-res {
+            display: inline-block;
+            margin-left: 2rem;
+            font-weight: bold;
+            font-size: larger;
+            color: rgba(1, 73, 255, 0.766);
+        }
+
+        .text1 {
+            text-align: center;
+            transform: translate(-8%, 0);
+        }
+
+        .text2 {
+            text-align: left;
+        }
+        
+
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-9">
+            <h1 class="text1">Товары</h1>
+        </div>
+        <div class="col-3">
+            <h1 class="text2">Заказ</h1>
+        </div>
+        <div class="col-md-8">
+            <table class=" table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">№</th>
+                        <th scope="col">Наименование</th>
+                        <th scope="col">Стоимость</th>
+                    </tr>
+                </thead>
+                <tbody id="product-table">
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Брелок</td>
+                        <td>1000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Носки</td>
+                        <td>2000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Шапка</td>
+                        <td>3000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Куртка</td>
+                        <td>4000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Штаны</td>
+                        <td>5000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>Кофта</td>
+                        <td>6000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">7</th>
+                        <td>Обувь</td>
+                        <td>7000</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                </tfoot>
+            </table>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-3 col-lg-3">
+            <table class="table table-sm table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Наименование</th>
+                        <th scope="col">Стоимость</th>
+                    </tr>
+                </thead>
+                <tbody id="order-table">
+                </tbody>
+                <tfoot>
+                </tfoot>
+            </table>
+            <div class="input-block">
+                <button type="submit" class="btn btn-primary btm-sm" id="calc">Расчитать стоимость</button>
+                <div id="calc-res"></div>
+            </div>
+        </div>
+        </div>
+</body>
+
+</html>

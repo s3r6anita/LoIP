@@ -1,0 +1,38 @@
+.wrapper-block {
+    padding: 20px;
+    border-radius: 15px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 80%;
+    overflow-y: scroll;
+    background: rgba(33, 37, 41, 0.5); /*#212529;*/
+    border: 2px solid #525c65;
+    text-align: center;
+    padding: 40px 50px;
+}
+
+.form-control {
+    background: #353b41 !important;
+    color: #fff !important;
+}
+.btn {
+    border: 1px solid #aaa !important;
+}
+.btn:hover {
+    background: #292e33 !important;
+}
+
+html, body {
+    height: 100%;
+}
+table {
+    color: #fff !important
+}
+
+body{
+    background: linear-gradient(0deg, rgba(255, 0, 255, .05) 0%, rgba(0, 255, 255, .05) 100%);
+    background-color: #2b3035 !important;
+    color: #eee !important;
+}

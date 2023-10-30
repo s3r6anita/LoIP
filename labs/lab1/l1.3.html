@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html  lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Регистрация</title>
+	<style>
+		form{
+			width: 350px;
+			height: 300px;
+			background-color: rgba(255, 192, 203, 0.5);
+		}
+		table{
+			width: 250px;
+			height: 200px;
+		}
+		.centerr{
+		    position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto; 
+		}
+		td {
+        	text-align: left;
+    }
+	</style>
+</head>
+<body>
+	<form class="centerr">
+	    <table class="centerr">	
+			<tr>
+				<td colspan="2"><h2 style="text-align: center">Форма регистрации</h2></td>
+	    	</tr>
+			<tr>
+	    		<td>Имя:</td>
+	    		<td><input type="text" name="NameField" required></td>
+	    	</tr>
+	    	<tr>    		
+	    		<td>Фамилия:</td>
+	    		<td><input type="text" name="SurnameField" required></td>
+			</tr>
+	        <tr>
+	            <td>Логин:</td>
+	            <td><input type="text" name="LoginField" required></td>
+	        </tr>
+	        <tr>
+	            <td>Пароль:</td>
+	            <td><input type="password" name="PasswordField" required></td>
+	        <tr>
+	            <td>Пол:</td>
+	            <td>
+	                <label>
+	                    <input type="radio" name="Sex" value="М"/>М
+	                </label>
+	                <label>
+	                    <input type="radio" name="Sex" value="Ж"/>Ж
+	                </label>
+	            </td>
+	        </tr>
+	        <tr>
+	            <td colspan="2" style="text-align: right"><input type="submit" name="SubmitBtn"></td>
+	        </tr>
+	    </table>
+	</form>
+</body>
+</html>

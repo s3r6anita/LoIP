@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Рубежный контроль 1</title>
+
+	<style type="text/css">
+		table {
+			border: solid;
+			border-width: 1px;
+		}
+		td {
+			text-align: center;
+		}
+		#target{
+			font-weight: bold;
+			background-color: #FF7FEDFF;
+		}
+
+	</style>
+
+	<script type="text/javascript">
+
+		// проверка поля ввода
+      	function checkInput(str) {
+			const pattern = /([^0-9\.\s-])|(\s{2,})|(\.{2,})|(\d+\.\d+\.)|(\s$)/;
+			return !Boolean(str.match(pattern));
+		}
+
+		// создание массива arr_v (в коде - arr)
+      	function createArr() { 
+      		let str = document.getElementById("in").value;
+      		if (!checkInput(str)){
+      			alert("Проверьте корректность значения в поле ввода (буквы, лишние пробелы, более одной точки)")
+      		}
+      		else {
+	      		arr = document.getElementById("in").value.split(' ');
+	      		return arr
+      		}
+      	}
+
+      	// поиск первого четного или максимального 
+      	function findIndex(arr){
+      		for (let i = 0; i < arr.length; i++) {
+		        if (arr[i]%2===0) {
+					return i;
+				}
+			}
+			let max = arr[0];
+			let max_index = 0;
+			for (let i=1; i < arr.length; i++){
+				if (arr[i] > max){
+					max_index = i;
+					max = arr[i];
+				}
+			}
+			return max_index;
+      	}
+
+      	// нажатие кнопки "Добавить"
+      	function click_add_button() {
+      		let arr = createArr();
+      		let out = document.getElementById("out");
+
+      		// очистка таблицы ввода
+      		while (out.firstChild) {
+   	 			out.removeChild(out.firstChild);
+			}
+
+      		for (let i = 0; i < arr.length; i++) {
+		        let newel = `
+                <tr>
+                    <td>`+(i+1)+`</td>
+                    <td>`+arr[i]+`</td>                    
+                </tr>
+            	`;
+	            out.innerHTML = out.innerHTML + newel;
+      		}
+      	}
+
+		// нажатие кнопки "Обработать"
+		function click_do_button() {
+
+			// дополнительная синхронизация с полем ввода
+			click_add_button();
+
+			// подсчёт суммы отрицательных элементов
+      		let arr = createArr();
+	        let sum = 0;
+	        for (let i = 0; i < arr.length; i++) {
+	        	if (arr[i]<0){
+	        		sum += parseInt(arr[i]);
+	        	}
+	        }
+
+	        // поиск индекса ячейки для вывода
+	        target_index = findIndex(arr);   
+
+	        // очистка таблицы вывода 
+	        let out = document.getElementById("out");
+      		while (out.firstChild) {
+   	 			out.removeChild(out.firstChild);
+			}
+
+			// вывод в таблицу в соответствии с условием
+      		for (let i = 0; i < arr.length; i++) {
+		        if (i===target_index) {
+		        	newel = `
+	                <tr>
+	                	<td>`+(i+1)+`</td>
+	                    <td id="target">`+sum+`</td>                    
+	                </tr>
+	            `;
+	        	} else{
+		        	newel = `
+	                <tr>
+	                    <td>`+(i+1)+`</td>
+	                    <td>`+arr[i]+`</td>                    
+	                </tr>
+	            	`;
+      			}
+	           	out.innerHTML = out.innerHTML + newel;
+		    }
+		        
+      	}
+
+	</script>
+
+</head>
+ <body>
+    <h1>Рубежный контроль №1</h1>
+    <h2>Билет №26</h2>
+    <h2>Рахманов С.А. | ИУ6-34Б | 7 октября 2022</h2>
+    
+    <h2>Текст задачи:</h2>
+    <p>
+      Дан массив чисел arr_v. Определить сумму отрицательных элементов массива и поместить её на место первого четного элемента или вместо максимального, если четных нет.
+    </p>
+
+    <h2>Реализация</h2>
+
+    <table>
+    	<tr>
+    		<td style="text-align: center;" colspan="2"><b>Ввод чисел массива</b></td>
+    	</tr>
+    	<tr>
+    		<td>Значение</td>
+    		<td>
+    			<input id="in" type="text" value="1 2 3" required>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td colspan="2" style="text-align: center;">
+    			<button id="add_button" onclick="click_add_button()"> Добавить </button>
+    		</td>
+    	</tr>
+    </table>
+    <p></p>
+    <p></p>
+    <p></p>
+    <table>
+    	<tr>
+    		<td><b>№</b></td>
+    		<td><b>Значение</b></td>
+    	</tr>
+    	<tbody id="out">
+    		
+    	</tbody>
+    </table>
+    <p></p>
+    <p></p>
+    <p></p>
+    <button id="do_button" onclick="click_do_button()"> Обработка </button>
+  </body>
+</html>
